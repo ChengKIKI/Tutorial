@@ -7,7 +7,7 @@
  项目根目录下
 
  ```
- npm install sass --save-dev
+ npm install sass-loader node-sass --save-dev
  ```
  安装命令有 ```--save-dev``` 和没有的区别在于是否写入package.js文件中的devDependencies中，具体可以自己实践下，一般项目的依赖都会加上 ```--save-dev```
 
