@@ -12,12 +12,18 @@
 
  ```
  before(app) {
-     app.get('/carlist' ,function(req, res, next){
+     app.get('/carlist' ,function(req, res){
          res.json({
              errno: 0,
-             data: carlistdata
+             data: carlistdata.result
          })
-     })
+     });
+     app.get('/slideList' ,function(req, res){
+         res.json({
+             errno: 0,
+             data: carlistdata.slideList
+         })
+     });
  }
  ```
  记得在头部require
@@ -33,4 +39,3 @@
   // do something
  })
  ```
- 
