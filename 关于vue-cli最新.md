@@ -35,7 +35,7 @@
  这样，我们就可以直接发送API请求数据了
 
  ```
- this.axios.get("/carlist").then(function(res){
+ axios.get("/carlist").then(function(res){
   // do something
  })
  ```
