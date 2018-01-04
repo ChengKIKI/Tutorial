@@ -12,7 +12,7 @@
 
  ```
  before(app) {
-     app.get('/carlist' ,function(req, res){
+     app.get('/result' ,function(req, res){
          res.json({
              errno: 0,
              data: carlistdata.result
