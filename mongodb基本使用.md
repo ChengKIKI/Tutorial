@@ -27,9 +27,38 @@
 
   switched to db test
   ```
-  插入数据
+  插入数据（增）
   ```
-  > db.test.insert({"name":"kiki"})
+  > db.test.insert({"name":"kiki","tag":"study"})
 
   WriteResult({ "nInserted" : 1 })
   ```
+  use test后如果不插入数据就离开该数据库，mongodb会自动删除，show dbs是找不到新创建的数据库的
+
+  更新数据（改）
+  ```
+  > db.test.update({"name":"kiki",{$set:{"tag":"work"}}})
+  ```
+  查找数据（查）接上条
+
+  ```
+  > db.test.find()
+  ```
+  根据上条的更改后的数据重新查询test数据库
+
+  ```
+  > db.test.find().pretty()
+  ```
+  把查询结果展开
+
+  条件查找
+  ```
+  > db.test.find({"name":"kiki"}).pretty()
+  ```
+  通过条件查找
+
+  删除数据（删）
+  ```
+  > db.test.remove({"name":"kiki"})
+  ```
+  删除之后可以find一下看看结果
